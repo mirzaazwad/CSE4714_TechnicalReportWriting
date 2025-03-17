@@ -1,0 +1,180 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{stix2}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage{amsmath, amssymb}
+
+\title{CSE 4714 (SWE) 2024 Section A Lab 2}
+\author{Mohammad Ishrak Abedin}
+\date{November 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Quotation Marks}
+
+The rude teacher said, ``You cannot do the lab with any group you want without prior permission.''
+
+\section{Mathematical Expressions}
+There are two modes, inline and display maths.
+
+\subsection{Inline Math}
+We can put a mathematical expression like $(a + b)^2 = a^2 + 2ab + b^2$. We can also write it as \( (a + b)^2\qquad = a^2 + 2ab + b^2  \). There is one more way, 
+\begin{math}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{math}.
+
+\subsection{Display Math} \label{ssec:displaymath}
+We can write display math as, \[ (a + b)^2 = a^2 + 2ab + b^2 \]. We can also write it as, \begin{displaymath}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{displaymath}
+Finally, we can also write it as,
+\begin{equation}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{equation}
+
+We also have,
+\begin{equation} \label{eqn:absq}
+    a ^ 2 - b ^ 2 = (a + b)(a - b)
+\end{equation}
+\begin{equation}
+    ab = ba
+\end{equation}
+
+In \autoref{eqn:absq}, we can see the formula for $a^2 - b^2$. We can learn about displaymath in \autoref{ssec:displaymath}.
+
+\subsection{Super and Subscript}
+\begin{equation}
+    a^{3.14159265} + b_{(i, j, k)} + C^{x}_{yz}
+\end{equation}
+
+\subsection{Fractions, Operators, ...}
+\begin{equation*}
+    2 \times 5 = 10
+\end{equation*}
+
+
+\begin{equation}
+    \sqrt{\frac{(a + b)}{(a - b)}} = \frac{1}{2} = \sqrt{x + y}
+\end{equation}
+
+Fractions will change their display inline, $\displaystyle \frac{(a + b)}{(a - b)} = \frac{1}{2}$. Fractions will change their display inline, $\frac{(a + b)}{(a - b)} = \frac{1}{2}$. Fractions will change their display inline, $\frac{(a + b)}{(a - b)} = \frac{1}{2}$. Fractions will change their display inline, $\frac{(a + b)}{(a - b)} = \frac{1}{2}$. Fractions will change their display inline, $\frac{(a + b)}{(a - b)} = \frac{1}{2}$. Fractions will change their display inline, $\frac{(a + b)}{(a - b)} = \frac{1}{2}$. 
+
+\subsection{Operators and Comparison}
+\begin{equation}
+    1 \times 2 = 2 = 1 + 1 = 3 - 1 = 4 / 2  
+\end{equation}
+
+% Following example is wrong
+% \begin{equation}
+%     sin^2\theta + cos^2\theta = 1
+% \end{equation}
+
+\begin{equation}
+    \sin^2\theta + \cos^2\theta = 1 = \tan^{-1}\alpha
+\end{equation}
+
+\subsection{Bracketization}
+\begin{equation}
+    \left.
+    \sqrt{\frac{(a + b)}{\sqrt{\frac{(a + b)}{(a - b)}}}} + 2
+    \right\}
+    \times 5 = \frac{1}{2} = \sqrt{x + y}
+\end{equation}
+
+\subsection{Greek Alphabets}
+\begin{equation}
+    \alpha \beta \gamma \delta = A B \Gamma \Delta
+\end{equation}
+
+\subsection{Calculus}
+We can write limits.
+
+\begin{equation}
+    \lim_{x \rightarrow \infty} \frac{1}{x} = 0
+\end{equation}
+\begin{equation}
+    \int_{x = 0}^{100} x dx = 500 = \sum_{i = 5}^{100} x_i = \prod_{\theta = 5^{\circ}}^{\pi} x_{\theta}
+\end{equation}
+\begin{equation}
+    \int\limits_{x = 0}^{100} x dx = 500
+\end{equation}
+
+\subsection{Calligraphy}
+
+\begin{equation}
+    \mathcal{ABCDE}\mathfrak{ABCDE}\mathbb{ABCDE}
+\end{equation}
+
+\subsection{Set Operations}
+
+\begin{equation}
+    A \cup B = C \cap D\ \text{for all}\ x \in \mathbb{Z}
+\end{equation}
+
+\subsection{Vector Operations}
+\begin{equation}
+    \Vec{V} = \Vec{A} \times \Vec{B}
+\end{equation}
+
+\begin{equation}
+    \Vec{A} \cdot \Vec{B} = 5
+\end{equation}
+
+\begin{equation}
+    \hat{i} \times \hat{j} = \hat{k}
+\end{equation}
+
+\begin{equation}
+    1 = 1 < 2 > 5 \neq 10 \geq 2 \leq 5
+\end{equation}
+
+\subsection{AMS Math Environments}
+
+\begin{equation*}
+    a + b = 5
+\end{equation*}
+
+
+\begin{multline}    
+    a + b + c + a + b + c + a + \\
+    b + c + a + b + c + a + b + c + \\
+    a + b + c + a + b + c + a + b + c + \\
+    a + b + c + a + b + c + a + b + c + a + \\
+    b + c + a + b + c + a + b + c + a + b + \\
+    c + a + b + c = 10
+\end{multline}
+
+\begin{equation}
+    \begin{split}
+         x &= \frac{10}{20} \\
+         &= \frac{1}{2} \\
+         &= 0.5
+    \end{split}
+\end{equation}
+
+\begin{align}
+    a + 2b - 3c &= 10 \\
+    2a + 5b + 6c &= -2 \\
+    -a + b + 6c &= -4
+\end{align}
+
+\begin{gather*}
+    2b - 3c = 10 \\
+    2a = -2 \\
+    -a + b + 6c = -4
+\end{gather*}
+
+\subsection{Matrices}
+
+\begin{equation*}
+    \mathbf{A} = \begin{vmatrix}
+        1 & 2 & 33 \\
+        4 & 5 & 6 \\
+        4 & 5 & 6 \\
+    \end{vmatrix}
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[left=1in, 
+    right=1cm,
+    top=2cm,
+    bottom=0.75in]{geometry}
+
+\usepackage{parskip}
+\usepackage{times}
+\usepackage{kantlipsum}
+\usepackage{hyperref}
+
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\graphicspath{
+    {
+    figures
+    }
+    {
+    assets
+    }
+}
+\DeclareGraphicsExtensions{
+
+}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{setspace} % Package used for chaning line-spacing
+\doublespacing % Changes line-spacing to 2
+% \onehalfspacing % Changes line-spacing top 1.5
+
+% Preamble section
+
+\title{Lab 3 Task}
+\author{Mirza Mohammad Azwad}
+\date{\today} % \today is used to fetch the current date automatically
+
+\begin{document}
+    % \maketitle \newpage
+
+    \section{Equation}
+
+    \begin{equation}
+    \label{eqn:fancy}\sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^s}
+    \overline{
+    \left(
+    \sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^{1-s}}
+    \right)}=0,
+    \quad\text{for}\quad \Re{(s)}>1 
+    \end{equation}
+
+    \begin{equation}\label{eqn:zeta}
+    \begin{split}
+        \zeta(s) &= \sum_{n=1}^{\infty}\frac{1}{n^s} \\
+        &= \prod_{\text{p prime}} \frac{1}{1-p^{-s}}, \quad\text{for}\quad \Re{(s)}>1 \\
+        \end{split}
+    \end{equation}
+
+    \begin{equation}
+    \label{eqn:xi}
+        \xi(s)=\xi(1-s)
+    \end{equation}
+
+    An inline math expression $O\sqrt{x}\log(x)$
+
+
+    Giving a Reference \ref{eqn:fancy}
+    Giving a Fancier Ref \autoref{eqn:xi}
+    Giving another Ref \ref{eqn:zeta}
+\end{document}

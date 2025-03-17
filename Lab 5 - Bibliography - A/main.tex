@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{kantlipsum}
+\usepackage{hyperref}
+
+\usepackage[style=ieee, sorting=ynt]{biblatex}
+
+\addbibresource{citations.bib}
+
+\title{Lab 5 - Bibliography}
+\author{Mohammad Ishrak Abedin}
+\date{March 2025}
+
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+Hello, World! We can cite to a work with \cite{norman2013design}. We can refer to another work \cite{twain2008tom}. We can also cite multiple works \cite{norman2013design, twain2008tom, wiki2025quaternion, wittern2016javascript}.
+
+\textcite{wittern2016javascript} discussed about a horrible language. We can put a citation within a parenthesis with \parencite{norman2013design}. Take a look at the wiki of Quaternions \footcite{wiki2025quaternion}.
+
+\printbibliography[heading=bibintoc, title={Bibliography}]
+
+% \bibliographystyle{acm}
+% \bibliography{citations}
+
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[left=1in, 
+    right=1cm,
+    top=2cm,
+    bottom=0.75in]{geometry}
+
+\usepackage{parskip}
+\usepackage{times}
+\usepackage{kantlipsum}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{setspace} % Package used for chaning line-spacing
+\doublespacing % Changes line-spacing to 2
+% \onehalfspacing % Changes line-spacing top 1.5
+
+% Preamble section
+
+\title{Basic of \LaTeX}
+\author{Mohammad Ishrak Abedin}
+\date{\today} % \today is used to fetch the current date automatically
+
+\begin{document}
+    % \maketitle \newpage
+
+    \begin{titlepage}
+        \maketitle
+        Some random text!
+        \tableofcontents
+    \end{titlepage}
+
+    \begin{abstract}
+        \kant[5]
+    \end{abstract}
+
+    \section{Introduction}
+    Hello, World! \textbf{\textit{Hello}, World!} Hello, World! \textit{Hello, World!} Hello, World! \\
+    \emph{Hello, World! Hello, World! Hello, World!Hello, World! \emph{Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World!} Hello, World! Hello, World! Hello, World!}
+
+    \section{Related Works}
+    Hello, World! \underline{Hello, World!} Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World! Hello, World!
+
+    \section{Methodology}
+    \kant[2-4]
+    
+    \subsection{Filtering Data}
+    \kant[1]
+
+    \subsection{Filtering Data Again}
+    \kant[1]
+
+    \subsubsection{Extreme Filtering}
+    Some text.
+    
+    \section{Experimentation}
+    \kant[1]
+
+    \section*{Acknowledgment} % An unnumbered section
+    \fontsize{8pt}{10pt}\selectfont I do not acknowledge anyone.
+
+    \section{Something Else}
+    \kant[1]
+    \begin{center} % flushleft, flushright for left, right alignments
+        \begin{tiny}
+            One line\\
+            Second line\\
+            One more line to see.\\
+        \end{tiny}
+    \end{center}
+
+\end{document}

@@ -1,0 +1,302 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{kantlipsum}
+
+\usepackage{hyperref}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\newcolumntype{C}{ >{\centering\arraybackslash}  p }
+\newcolumntype{R}{ >{\raggedleft\arraybackslash}  p }
+\newcolumntype{Y}{ >{\centering\arraybackslash} X }
+
+%\setlength{\arrayrulewidth}{1.2pt}
+%\setlength{\tabcolsep}{15pt}
+%\renewcommand{\arraystretch}{0.5}
+
+\title{Lab 4 - Tables - Group A}
+\author{Mohammad Ishrak Abedin}
+\date{February 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\listoftables
+
+Hello, World!
+
+\begin{center}
+    \begin{tabular}{| l || c | p{0.3\textwidth} |}
+        \hline
+        Header 1 & Header 2 & Header 3 \\
+        \hline\hline
+        Cell 1 & Cell 2 & Cell 3 \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\kant[1]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{| l || c | p{0.3\textwidth} |}
+        \hline
+        Header 1 & Header 2 & Header 3 \\[2em]
+        \hline\hline
+        Cell 1 & Cell 2 & Cell 3 \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+    \end{tabular}
+    \caption{A simple table}
+    \label{tab:simple}
+\end{table}
+
+We can refer to our table with \ref{tab:simple} or auto deduce with \autoref{tab:simple}. \kant[2]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{| l || c | C{0.3\textwidth} |}
+        \hline
+        Header 1 & Header 2 & Header 3 \\
+        \hline\hline
+        Cell 1 & Cell 2 & Cell 3 \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough!\\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+    \end{tabular}
+    \caption{Another simple table}
+    \label{tab:simple2}
+\end{table}
+
+\kant[3]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{| l || c | m{0.3\textwidth} |}
+        \hline
+        Header 1 & Header 2 & Header 3 \\
+        \hline\hline
+        Cell 1 & Cell 2 & Cell 3 \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough!\\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+        Cell 4 & Cell 5 & Why not put something else here? How about even more text? Still not enough! \\
+        \hline
+    \end{tabular}
+    \caption{Another not so simple table}
+    \label{tab:simple3}
+\end{table}
+
+\kant[4]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{0.8\textwidth}{| l || c | X | Y |}
+        \hline
+        Header 1 & Header 2 & Header 3 & Header 4 \\
+        \hline\hline
+        Cell 1 & Cell 2 & Cell 3 & Cell 4 \\
+        \hline
+        Cell 1 & Cell 2 & Cell 3 & Cell 4 \\
+        \hline
+        Cell 1 & Cell 2 & Cell 3 & Cell 4 \\
+        \hline
+        Cell 1 & Cell 2 & Cell 3 & Cell 4 \\
+        \hline
+        Cell 1 & Cell 2 & Cell 3 & This is a paragraph type column \\
+        \hline
+
+    \end{tabularx}
+    \caption{A TabularX table}
+    \label{tab:tabx}
+\end{table}
+
+\kant[5]
+
+\begin{table}[htbp]
+    \centering
+    \caption{A Multicolumn and Multirow table}
+    \begin{tabular}{ | *{5}{c |}} % |c |c |c |c |c |  
+        \hline
+        \multicolumn{3}{| c |}{Merged} & Cell 1, 4 & Cell 1,5 \\
+        \hline
+        Cell 2, 1 & Cell 2, 2 & Cell 2, 3 & Cell 2, 4 & Cell 2, 5 \\
+        \hline
+        \multicolumn{3}{| c |}{ \multirow{3}{*}{ Grand Merge } } & \multirow{2}{*}{Merged Rows} & Cell 3,5 \\
+        \cline{5-5}
+        \multicolumn{3}{| c |}{ } &  & Cell 4,5 \\
+        \cline{4-5}
+        \multicolumn{3}{| c |}{ } & Cell 5, 4 & Cell 5,5 \\
+        \hline
+    \end{tabular}
+    \label{tab:my_label}
+\end{table}
+
+\kant[6]
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c c c}
+        \toprule
+        Header 1 & Header 2 & Header 3 \\
+        \midrule
+        Cell 1 & Cell 2 & Cell 3 \\
+        \cmidrule{2-3}
+        Cell 1 & Cell 2 & Cell 3 \\
+        Cell 1 & Cell 2 & Cell 3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{A booktabs table}
+    \label{tab:booktabs}
+\end{table}
+
+\kant[7]
+
+\begin{longtable}[c]{| c | c |}
+ \caption{Long table caption.\label{tab:long}}\\
+
+ \hline
+ \multicolumn{2}{| c |}{Begin of Table}\\
+ \hline
+ Something & something else\\
+ \hline
+ \endfirsthead
+
+ \hline
+ \multicolumn{2}{|c|}{Continuation of Table \ref{tab:long}}\\
+ \hline
+ Something & Not something else\\
+ \hline
+ \endhead
+
+ \hline
+ \hline
+ \multicolumn{2}{|c|}{Repeated foot} \\
+ \hline
+ \endfoot
+
+ \hline
+ \multicolumn{2}{| c |}{End of Table}\\
+ \hline\hline
+ \endlastfoot
+
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ Lots of lines & like this\\
+ \end{longtable}
+
+\end{document}
